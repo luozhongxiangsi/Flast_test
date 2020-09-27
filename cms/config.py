@@ -1,0 +1,6 @@
+DEBUG = True
+DB_USERNAME = 'root'
+DB_PASSWORD = 'lz79322!!'
+DB_HOST = '127.0.0.1'
+DB_PROT = '3306'
+DB_NAME = 'test'
