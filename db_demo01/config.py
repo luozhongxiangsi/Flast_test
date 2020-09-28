@@ -1,11 +1,12 @@
-#encoding:utf-8
-HOST = '127.0.0.1'
-PORT = '3306'
-DRIVER='mysqldb'
 USERNAME = 'root'
 PASSWORD = 'lz793224!'
+HOST = '127.0.0.1'
+PORT = '3306'
 DATABASE = 'db_demo1'
-DB_URI = 'mysql+pymysql://{username}:{password}@{host}:{port}/{db}?charset-utf8'.format(username=USERNAME,
-                                                                                        password=PASSWORD,                                                                      host=HOST,                                                                                port=PORT,                                                                               db=DATABASE)
+DB_URI = 'mysql+pymysql://{}:{}@{}:{}/{}?charset=utf8'.format(USERNAME, PASSWORD, HOST, PORT, DATABASE)
 SQLALCHEMY_DATABASE_URI = DB_URI
-SQLALCHEMY_TRACK_MODIFICATIONS = False
+# 动态追踪修改设置，如未设置只会提示警告
+SQLALCHEMY_TRACK_MODIFICATIONS=False
+#查询时会显示原始SQL语句
+SQLALCHEMY_ECHO = True
+
