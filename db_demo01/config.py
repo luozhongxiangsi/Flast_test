@@ -1,14 +1,11 @@
-# encoding:utf-8
-import pymysql
-pymysql.install_as_MySQLdb()
-
-
-USERNAME = 'root'
-PASSWORD = 'lz1003!!'
+#encoding:utf-8
 HOST = '127.0.0.1'
-PORT = 3306
-DATABASES = 'db_demo1'
-DB_URI = 'MySQL+pyMySQL://{}:{}@{}:{}/{}?charset=uft8'.format(USERNAME, PASSWORD, HOST, PORT, DATABASES)
+PORT = '3306'
+DRIVER='mysqldb'
+USERNAME = 'root'
+PASSWORD = 'lz793224!'
+DATABASE = 'db_demo1'
+DB_URI = 'mysql+pymysql://{username}:{password}@{host}:{port}/{db}?charset-utf8'.format(username=USERNAME,
+                                                                                        password=PASSWORD,                                                                      host=HOST,                                                                                port=PORT,                                                                               db=DATABASE)
 SQLALCHEMY_DATABASE_URI = DB_URI
 SQLALCHEMY_TRACK_MODIFICATIONS = False
-SQLALCHEMY_ECHO = True
